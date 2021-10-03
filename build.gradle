@@ -1,6 +1,5 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.30'
-    id "org.jetbrains.kotlin.kapt" version "1.6.0-M1"
 }
 
 group 'com.github.kadehar'
@@ -13,10 +12,14 @@ repositories {
 dependencies {
     //sdk
     implementation 'org.jetbrains.kotlin:kotlin-stdlib'
-    //json
-    implementation 'com.squareup.moshi:moshi-kotlin:1.12.0'
-    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.12.0'
     //http
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //config
+    implementation 'com.sksamuel.hoplite:hoplite-core:1.4.9'
+}
+
+tasks.withType(JavaCompile) {
+    System.getProperties()
+    options.encoding = 'UTF-8'
 }
