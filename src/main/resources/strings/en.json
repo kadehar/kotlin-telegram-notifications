@@ -1,0 +1,8 @@
+{
+  "project": "Project",
+  "duration": "Duration",
+  "totalScenarios": "Total scenarios",
+  "passed": "Passed",
+  "failed": "Failed",
+  "report": "Report"
+}
