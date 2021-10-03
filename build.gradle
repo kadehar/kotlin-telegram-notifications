@@ -19,6 +19,8 @@ dependencies {
     implementation 'com.uchuhimo:konf:1.1.2'
     //template
     implementation 'org.freemarker:freemarker:2.3.31'
+    //threads
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
 }
 
 tasks.withType(JavaCompile) {

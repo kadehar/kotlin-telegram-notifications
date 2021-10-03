@@ -61,9 +61,9 @@ fun prepareTemplateData(project: Project, summary: Summary): Map<String, Any> {
     )
 }
 
-fun collectTemplateData(project: Project, summary: Summary): Map<String, Any> {
+fun collectTemplateData(phrases: Map<String, String>, data: Map<String, Any>): Map<String, Any> {
     val map = hashMapOf<String, Any>()
-    map.putAll(templatePhrases(project.language))
-    map.putAll(prepareTemplateData(project, summary))
+    map.putAll(phrases)
+    map.putAll(data)
     return map
 }
